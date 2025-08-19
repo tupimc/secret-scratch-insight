@@ -24,6 +24,14 @@ export default {
 				ring: 'hsl(var(--ring))',
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
+				'text-body': 'hsl(var(--text-body))',
+				'text-muted': 'hsl(var(--text-muted))',
+				'headline-red': 'hsl(var(--headline-red))',
+				'cta-green': 'hsl(var(--cta-green))',
+				'cta-green-hover': 'hsl(var(--cta-green-hover))',
+				'accent-blue': 'hsl(var(--accent-blue))',
+				'border-light': 'hsl(var(--border-light))',
+				'background-subtle': 'hsl(var(--background-subtle))',
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',
 					foreground: 'hsl(var(--primary-foreground))'

@@ -2,41 +2,46 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Importar fonte jornalística */
+@import url('https://fonts.googleapis.com/css2?family=Times+New+Roman:wght@400;700&family=Arial:wght@400;600;700&display=swap');
 
+/* Sistema de design jornalístico */
 @layer base {
   :root {
+    /* Cores jornalísticas */
     --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
-
+    --foreground: 0 0% 13%;
+    --text-body: 0 0% 20%;
+    --text-muted: 0 0% 45%;
+    
+    /* Cores de destaque */
+    --headline-red: 0 75% 45%;
+    --cta-green: 120 60% 35%;
+    --cta-green-hover: 120 65% 30%;
+    --accent-blue: 210 100% 40%;
+    
+    /* Tons neutros */
+    --border-light: 0 0% 90%;
+    --background-subtle: 0 0% 98%;
+    --shadow-news: 0 0% 0%;
+    
+    /* Componentes padrão */
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
-
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
-
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
-
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-
+    --card-foreground: 0 0% 13%;
+    --primary: 0 75% 45%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 0 0% 96%;
+    --secondary-foreground: 0 0% 13%;
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 45%;
+    --accent: 210 100% 40%;
+    --accent-foreground: 0 0% 98%;
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
-
-    --radius: 0.5rem;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 90%;
+    --input: 0 0% 90%;
+    --ring: 0 75% 45%;
+    --radius: 0.25rem;
 
     --sidebar-background: 0 0% 98%;
 
@@ -100,6 +105,40 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-news;
+  }
+
+  /* Estilos jornalísticos customizados */
+  .news-headline {
+    @apply text-4xl md:text-5xl font-bold leading-tight text-headline-red mb-6;
+    font-family: Arial, sans-serif;
+  }
+
+  .news-body {
+    @apply text-base md:text-lg leading-relaxed text-text-body;
+    font-family: 'Times New Roman', serif;
+  }
+
+  .news-subtitle {
+    @apply text-xl md:text-2xl font-semibold text-foreground mt-8 mb-4;
+    font-family: Arial, sans-serif;
+  }
+
+  .cta-button {
+    @apply bg-cta-green hover:bg-cta-green-hover text-white font-bold py-4 px-8 rounded-md text-lg transition-colors duration-200 shadow-lg hover:shadow-xl;
+  }
+
+  .news-quote {
+    @apply border-l-4 border-accent-blue bg-background-subtle p-6 my-6 italic text-text-body;
+  }
+}
+
+@layer components {
+  .font-news {
+    font-family: 'Times New Roman', serif;
+  }
+
+  .font-headline {
+    font-family: Arial, sans-serif;
   }
 }
