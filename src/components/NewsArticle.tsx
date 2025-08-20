@@ -7,7 +7,7 @@ const NewsArticle = () => {
   };
   return <article className="max-w-4xl mx-auto px-4 py-8">
       {/* Headline Principal */}
-      <h1 className="news-headline">Estratégia descoberta por brasileiros, um novo método curioso que aumenta as chances nos jogos de sorte – veja como funciona</h1>
+      <h1 className="news-headline">Brasileiros estão descobrindo um novo método curioso que vem chamando atenção nos jogos de sorte – veja como funciona</h1>
       
       {/* Metadados da notícia */}
       <div className="flex items-center space-x-4 text-sm text-text-muted mb-6">
