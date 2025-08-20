@@ -1,18 +1,13 @@
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/scratch-card-hero.jpg";
-
 const NewsArticle = () => {
   const handleCTAClick = () => {
     // URL será configurável posteriormente
     window.open("https://example.com/quiz", "_blank");
   };
-
-  return (
-    <article className="max-w-4xl mx-auto px-4 py-8">
+  return <article className="max-w-4xl mx-auto px-4 py-8">
       {/* Headline Principal */}
-      <h1 className="news-headline">
-        Brasileiros estão descobrindo um novo método curioso que aumenta as chances na raspadinha virtual – veja como funciona
-      </h1>
+      <h1 className="news-headline">Estratégia descoberta por brasileiros, um novo método curioso que aumenta as chances nos jogos de sorte – veja como funciona</h1>
       
       {/* Metadados da notícia */}
       <div className="flex items-center space-x-4 text-sm text-text-muted mb-6">
@@ -25,11 +20,7 @@ const NewsArticle = () => {
 
       {/* Imagem em destaque */}
       <div className="mb-8">
-        <img 
-          src={heroImage} 
-          alt="Pessoa utilizando raspadinha com moedas sobre mesa" 
-          className="w-full h-auto rounded-lg shadow-md"
-        />
+        <img src={heroImage} alt="Pessoa utilizando raspadinha com moedas sobre mesa" className="w-full h-auto rounded-lg shadow-md" />
         <p className="text-sm text-text-muted mt-2 italic">
           Método vem chamando atenção de usuários em todo o país
         </p>
@@ -105,8 +96,6 @@ const NewsArticle = () => {
           <strong>Importante:</strong> O método não garante resultados e deve ser aplicado sempre com responsabilidade. Os relatos apresentados são baseados em experiências individuais e podem variar de pessoa para pessoa.
         </p>
       </div>
-    </article>
-  );
+    </article>;
 };
-
 export default NewsArticle;
